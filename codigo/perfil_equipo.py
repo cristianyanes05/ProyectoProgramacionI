@@ -39,7 +39,7 @@ integrantes = input("Ingresá el nombre de cada integrante: ")
 print("---")
 rol_proyecto = input("Ingresá el rol inicial de cada integrante: ")
 print("---")
-
+print("\n")
 print("---RESULTADOS---")
 print(f"Nombres normalizados: {integrantes.title()}")
 print("---")
@@ -48,9 +48,9 @@ print("---")
 print(f"Candidad de caracteres que contiene el nombre del equipo: {len(nombre_equipo)}")
 print("---")
 sigla_equipo = generar_sigla(nombre_equipo)
-print("---")
 print(f"Sigla del equipo: {sigla_equipo}")
-contiene_numero = verificar_digito 
+print("---")
+contiene_numero = verificar_digito(nombre_equipo) 
 if contiene_numero:
     print (f"El nombre del equipo {nombre_equipo} contiene numeros")
 else:
