@@ -30,7 +30,9 @@ def verificar_digito(nombre):
     return False
 
 
-print ("--- PERFIL DEL EQUIPO ---")
+print("\n")
+cadena1= "PERFIL DEL EQUIPO"
+print(cadena1.center(50, "-"))
 nombre_equipo = input("Ingresá el nombre del equipo: ")
 print("---")
 comision = int(input("Ingresá la comisión perteneciente: "))
@@ -40,7 +42,8 @@ print("---")
 rol_proyecto = input("Ingresá el rol inicial de cada integrante: ")
 print("---")
 print("\n")
-print("---RESULTADOS---")
+cadena2= "RESULTADOS"
+print(cadena2.center(50, "-"))
 print(f"Nombres normalizados: {integrantes.title()}")
 print("---")
 print(f"Nombre del equipo en mayúscula: {nombre_equipo.upper()}")
