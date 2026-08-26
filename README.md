@@ -13,11 +13,13 @@ Los puntos de las rondas serán ingresados aleatoriamente utilizando la librerí
 
 Mensaje de bienvenida al menú del torneo
 Menú:
-4 opciones:
+ opciones:
 ver equipos iniciales
 agregar un equipo
 simular torneo
 Buscar equipo
+puntaje maximo
+puntaje promedio por equipo (otra matriz)
 fin
 
 ver equipos iniciales: 
