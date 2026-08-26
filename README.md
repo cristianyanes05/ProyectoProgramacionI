@@ -7,13 +7,4 @@ Probelma:
     Creacion de Sistema para administrar un torneo de un videojuego (Cs2).
 
 Alcance del Proyecto:
-    Gestión de Participantes (Jugadores / Equipos):
-        Alta, baja y modificación de datos de jugadores o equipos.
-        Validación y limpieza de nombres y correos (usando formateo y métodos de str).
-
-    Administración del Torneo:
-        Registro de puntajes, partidas jugadas, victorias y derrotas mediante matrices/tablas de posiciones.
-
-    Estadisticas:
-        Visualización de la tabla de posiciones.
-        Búsqueda e inspección de estadísticas individuales de un jugador.
+    El proyecto consiste en desarrollar un sistema por consola para gestionar un torneo de eSports. Permite registrar, editar y dar de baja a los jugadores o equipos, asegurando que datos como nombres y correos queden bien validados. También lleva el control del torneo registrando victorias, derrotas y puntos en una matriz, además de mostrar la tabla de posiciones y las estadísticas individuales de cada participante.
