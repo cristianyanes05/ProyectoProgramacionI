@@ -1,5 +1,9 @@
-banco_general=('eq1','eq2','eq3','eq4','eq5','eq6','eq7','eq8')
+banco_general=('eq11','eq22','eq33','eq44','eq55','eq66','eq77','eq88')
 
 agregados=[]
+
+eleccion=[]
+
+codigo_equipos=[]
 
 

@@ -28,14 +28,13 @@ def main():
             print('debe ingresar un numero del 1 al 9 ')
 
         if opcion==1:
-            print(op.equipos_finales())
+            op.ver_equipos()
 
         if opcion==2:
             op.agregar()
 
         if opcion==3:
             equipos=op.equipos_finales()
-
             op.final()
 
  
