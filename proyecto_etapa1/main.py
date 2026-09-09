@@ -11,8 +11,7 @@ def mostrar_menu():
     print("6. Estadísticas de Equipo")
     print("7. Podio")
     print("8. Líderes en Barridas")
-    print("9. Resumen General")
-    print("10. Salir")
+    print("9. Salir")
 
 def main():
     while True:
@@ -62,11 +61,8 @@ def main():
                 op.lideres_barridas()
             else:
                 print("\n Primero debe simular el torneo.")
-         
-        
-            
 
-        if opcion==10:
+        if opcion==9:
             print('\n Programa Finalizado')
             break
 
