@@ -4,9 +4,9 @@ agregados=[]
 
 eleccion=[]
 
-codigo_equipos=[]
-
 equipos_finales = []
+
+codigo_equipos=[]
 
 matriz_torneo = []
 

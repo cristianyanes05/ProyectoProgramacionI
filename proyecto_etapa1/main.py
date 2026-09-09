@@ -51,11 +51,22 @@ def main():
             else:
                 print("\n Primero debe simular el torneo.")
 
+        if opcion == 7:
+            if datos.torneo_simulado:
+                op.podio()
+            else:
+                print("\n Primero debe simular el torneo.")
 
- 
+        if opcion == 8:
+            if datos.torneo_simulado:
+                op.lideres_barridas()
+            else:
+                print("\n Primero debe simular el torneo.")
+         
+        
             
 
-        if opcion==9:
+        if opcion==10:
             print('\n Programa Finalizado')
             break
 

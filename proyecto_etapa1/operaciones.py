@@ -1,12 +1,26 @@
 from random import randint
 import datos 
 
+# FUNCIONES AUXILIARES
+def codigo(puntos_totales):
+    
+    for i in range(6):
+        puntos= sum([ puntos for puntos in datos.matriz_torneo[i] if puntos !=1 ])
+
+        puntos_totales.append(puntos)
+
+    return puntos_totales
+
+
+
+#FUNCIONES PRINCIPALES
 def ver_equipos():
     print(f'\n ----Equipos---- \n')
     for equipo in datos.banco_general:
         print(f'"{equipo}"')
 
     input("\nPresiona ENTER para volver al menú...")
+
 
 
 def agregar():
@@ -25,6 +39,7 @@ def agregar():
             print("Entrada inválida. Solo se permiten palabras sin números ni símbolos.\n")
 
 
+#ELEGIR RANDOM LOS EQUIPOS DE BANCO_GENERAL
 def eleccion():
     faltantes=6-len(datos.agregados)
 
@@ -42,20 +57,22 @@ def eleccion():
     return datos.eleccion
 
 
+#JUNTA EQUIPOS DEL BANCO CON LOS ELEGIDOS POR EL USUARIO 
 def equipos_finales():
-    equipos_totales=[]
+    equipos_finales=[]
 
     equipo=eleccion()
     for i in equipo:
-        equipos_totales.append(i)
+        equipos_finales.append(i)
 
 
     for i in datos.agregados:
-        equipos_totales.append(i)
+        equipos_finales.append(i)
 
-    return equipos_totales
+    return equipos_finales
 
 
+#GENERA CODIGO DE LOS EQUIPOS FINALES
 def generar_codigo(lista_equipos):
 
     datos.codigo_equipos=[]
@@ -75,10 +92,12 @@ def generar_codigo(lista_equipos):
     return datos.codigo_equipos
 
 
+
 def armar_matriz(equipos):
     partidas=5
     matriz_total=[[-1 for _ in range(partidas)] for _ in range(len(equipos))]
     return matriz_total
+
 
 
 def visualizar_equipos_finales():
@@ -88,22 +107,24 @@ def visualizar_equipos_finales():
 
     matriz = armar_matriz(equipos)
 
-    print(f"{'equipo':^12}", end=" | ")
+    print(f"{'equipo':}", end=" | ")
 
     
     for i in range(5):
-        print(f"{'Ronda ' + str(i + 1):^12}", end=" | ")
+        print(f"{'Ronda ' + str(i + 1):}", end=" | ")
 
     print()
     print("-" * 90)
 
     for i in range(len(equipos)):
-        print(f"{codigos[i]:^12}", end=" | ")
+        print(f"{codigos[i]:}", end=" | ")
 
         for valor in matriz[i]:
-            print(f"{valor:^12}", end=" | ")
+            print(f"{valor:}", end=" | ")
 
         print()
+
+        
 
 #TORNEO 
 def simular_serie():
@@ -182,10 +203,17 @@ def simular_torneo():
 def tabla_general():
     puntos_totales=[]
 
-    for i in range(6):
-        puntos= sum([ puntos for puntos in datos.matriz_torneo[i] if puntos !=1 ])
+    codigo(puntos_totales)
 
-        puntos_totales.append(puntos)
+    indices= sorted(range(6), key=lambda i: puntos_totales[i], reverse=True)
+
+    print('---Tabla General---')
+
+    for posicion in range(6):
+
+        i=indices[posicion]
+
+        print(f'-{posicion+1}  {datos.codigo_equipos[i]} = {puntos_totales[i]}')
 
     
 
@@ -199,7 +227,7 @@ def estadistica_equipo():
         if datos.codigo_equipos[i] == equipo:
             posicion = i
 
-            print(f"\n===== ESTADÍSTICAS DE {equipo} =====")
+            print(f"\n---ESTADÍSTICAS DE {equipo} ----")
 
             for ronda in range(5):
                 print(
@@ -224,4 +252,47 @@ def estadistica_equipo():
         input("\nPresione ENTER para volver al menú...")
         return
 
-            
+
+def podio():
+    puntos_totales=[]
+
+    codigo(puntos_totales)
+   
+    indices= sorted(range(6), key=lambda i: puntos_totales[i], reverse=True)
+
+    print('---Podio---')
+
+    for posicion in range(3):
+
+        i=indices[posicion]
+
+        print(f'-{posicion+1}  {datos.codigo_equipos[i]} = {puntos_totales[i]}')
+    
+
+def lideres_barridas():
+
+    cantidad_barridas=[]
+
+    for i in range(6):
+
+        barridas=sum([1 for puntos in datos.matriz_torneo[i] if puntos == 6])
+
+        cantidad_barridas.append(barridas)
+
+    max_barridas=max(cantidad_barridas)
+
+    print('---Lideres de Barridas---')
+
+    if max_barridas == 0:
+
+        print("Ningún equipo consiguió una barrida.")
+
+    else:
+
+        for i in range(6):
+
+            if cantidad_barridas[i] == max_barridas:
+
+                print(f"{datos.codigo_equipos[i]}= {cantidad_barridas[i]} barridas")
+
+    input("\nPresione ENTER para volver al menú...")
