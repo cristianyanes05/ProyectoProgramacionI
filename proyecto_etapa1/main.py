@@ -26,16 +26,16 @@ def main():
 
             print('debe ingresar un numero del 1 al 9 ')
 
-        if opcion==1:
+        if opcion == 1:
             op.ver_equipos()
 
-        if opcion==2:
+        if opcion == 2:
             op.agregar()
 
-        if opcion==3:
+        if opcion == 3:
             op.visualizar_equipos_finales()
 
-        if opcion==4:
+        if opcion == 4:
             op.simular_torneo()
 
         if opcion==5:
@@ -44,7 +44,7 @@ def main():
             else:
                 print("\n Primero debe simular el torneo.")
 
-        if opcion==6:
+        if opcion == 6:
             if datos.torneo_simulado:
                 op.estadistica_equipo()
             else:
@@ -62,7 +62,7 @@ def main():
             else:
                 print("\n Primero debe simular el torneo.")
 
-        if opcion==9:
+        if opcion == 9:
             print('\n Programa Finalizado')
             break
 
