@@ -34,8 +34,17 @@ def main():
             op.agregar()
 
         if opcion==3:
-            equipos=op.equipos_finales()
             op.final()
+
+        if opcion==4:
+            op.simular_torneo()
+
+        if opcion==5:
+            op.tabla_general()
+
+        if opcion==6:
+            op.puntaje_especifico()
+
 
  
             

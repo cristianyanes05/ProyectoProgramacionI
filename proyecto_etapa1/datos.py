@@ -6,4 +6,10 @@ eleccion=[]
 
 codigo_equipos=[]
 
+equipos_finales = []
+
+matriz_torneo = []
+
+torneo_simulado = False
+
 
