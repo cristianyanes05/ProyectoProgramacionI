@@ -1,4 +1,4 @@
-banco_general=('eq11','eq22','eq33','eq44','eq55','eq66','eq77','eq88')
+banco_general=('Fnatic','Natus Vincere','Team Vitality','FaZe Clan','G2 Esports','Cloud9','9z Team','ShindeN')
 
 agregados=[]
 
