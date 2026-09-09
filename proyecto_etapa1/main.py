@@ -34,22 +34,28 @@ def main():
             op.agregar()
 
         if opcion==3:
-            op.final()
+            op.visualizar_equipos_finales()
 
         if opcion==4:
             op.simular_torneo()
 
         if opcion==5:
-            op.tabla_general()
+            if datos.torneo_simulado:
+                op.tabla_general()
+            else:
+                print("\n Primero debe simular el torneo.")
 
         if opcion==6:
-            op.puntaje_especifico()
+            if datos.torneo_simulado:
+                op.estadistica_equipo()
+            else:
+                print("\n Primero debe simular el torneo.")
 
 
  
             
 
-        elif opcion=='9':
+        if opcion==9:
             print('\n Programa Finalizado')
             break
 

@@ -81,7 +81,7 @@ def armar_matriz(equipos):
     return matriz_total
 
 
-def final():
+def visualizar_equipos_finales():
     equipos = equipos_finales()
 
     codigos= generar_codigo(equipos)
@@ -189,13 +189,39 @@ def tabla_general():
 
     
 
-def puntaje_especifico():
-    equipo= input('elija el equipo a ver el puntaje: ')
+def estadistica_equipo():
+    equipo= input('elija el codigo del equipo a ver el puntaje: ').upper()
 
-    if equipo not in datos.equipos_finales:
-        print(f'el equipo {equipo} no se encuentra dentro de la matriz ')
+    posicion=-1
 
-    else:
+    for i in range(len(datos.codigo_equipos)):
 
+        if datos.codigo_equipos[i] == equipo:
+            posicion = i
+
+            print(f"\n===== ESTADÍSTICAS DE {equipo} =====")
+
+            for ronda in range(5):
+                print(
+                    f"Ronda {ronda + 1}: "
+                    f"{datos.matriz_torneo[posicion][ronda]} puntos"
+                )
+
+            series_ganadas= sum([ 1 for puntos in datos.matriz_torneo[posicion] if puntos in (3,6)])
+
+            puntos_totales= sum([
+                puntos for puntos in datos.matriz_torneo[posicion] if puntos !=-1
+            ])
+
+            promedio= puntos_totales/5
+
+            print(f"\n Puntos totales: {puntos_totales}")
+            print(f"Series ganadas: {series_ganadas}")
+            print(f"Promedio de puntos: {promedio:.2f}")
+
+    if posicion == -1:
+        print("Ese equipo no existe.")
+        input("\nPresione ENTER para volver al menú...")
+        return
 
             
