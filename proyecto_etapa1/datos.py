@@ -1,15 +1,16 @@
-banco_general=('Fnatic','Natus Vincere','Team Vitality','FaZe Clan','G2 Esports','Cloud9','9z Team','ShindeN')
+def obtener_banco_general():
 
-agregados=[]
+    banco_general = (
+        'Fnatic',
+        'Natus Vincere',
+        'Team Vitality',
+        'FaZe Clan',
+        'G2 Esports',
+        'Cloud9',
+        '9z Team',
+        'ShindeN'
+    )
 
-eleccion=[]
-
-equipos_finales = []
-
-codigo_equipos=[]
-
-matriz_torneo = []
-
-torneo_simulado = False
+    return banco_general
 
 

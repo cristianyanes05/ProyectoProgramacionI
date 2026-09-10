@@ -1,8 +1,9 @@
 import operaciones as op
 import datos
 
+
 def mostrar_menu():
-    print("\n===== TORNEO CS2 =====")
+    print("\n--- Torneo CS2 ---")
     print("1. Ver Banco General")
     print("2. Agregar Equipo")
     print("3. Visualizar Equipos Finales")
@@ -11,61 +12,89 @@ def mostrar_menu():
     print("6. Estadísticas de Equipo")
     print("7. Podio")
     print("8. Líderes en Barridas")
-    print('-'*20)
+    print('-' * 20)
     print("9. Salir")
 
+
 def main():
-    while True:
+    banco_general = datos.obtener_banco_general()
+
+    agregados = []
+    equipos_finales = []
+    codigo_equipos = []
+    matriz_torneo = []
+
+    torneo_simulado = False
+
+    opcion = 0
+
+    while opcion != 9:
+
         mostrar_menu()
 
-        while True:
-            opcion=input('seleccione una opcion: ')
+        opcion = input('Seleccione una opcion: ')
 
-            if opcion.isdigit():
-                opcion=int(opcion)
-                break
+        while (not opcion.isdigit() or int(opcion) < 1 or int(opcion) > 9 ):
 
-            print('debe ingresar un numero del 1 al 9 ')
+            print('Debe ingresar un numero del 1 al 9.')
+
+            opcion = input('Seleccione una opcion: ')
+
+        opcion = int(opcion)
 
         if opcion == 1:
-            op.ver_equipos()
+            op.ver_equipos(banco_general)
 
-        if opcion == 2:
-            op.agregar()
+        elif opcion == 2:
+            agregados = op.agregar(agregados)
 
-        if opcion == 3:
-            op.visualizar_equipos_finales()
+        elif opcion == 3:
+            equipos_finales = op.equipos_finales(banco_general,agregados)
 
-        if opcion == 4:
-            op.simular_torneo()
+            codigo_equipos = op.generar_codigo(equipos_finales)
 
-        if opcion==5:
-            if datos.torneo_simulado:
-                op.tabla_general()
+            op.visualizar_equipos_finales(equipos_finales,codigo_equipos)
+
+        elif opcion == 4:
+            if len(equipos_finales) == 6:
+                matriz_torneo = op.simular_torneo(equipos_finales,codigo_equipos)
+
+                torneo_simulado = True
+
             else:
-                print("\n Primero debe simular el torneo.")
+                print("\nPrimero debe visualizar los equipos finales.")
 
-        if opcion == 6:
-            if datos.torneo_simulado:
-                op.estadistica_equipo()
-            else:
-                print("\n Primero debe simular el torneo.")
+        elif opcion == 5:
+            if torneo_simulado:
+                op.tabla_general(matriz_torneo,codigo_equipos)
 
-        if opcion == 7:
-            if datos.torneo_simulado:
-                op.podio()
             else:
-                print("\n Primero debe simular el torneo.")
+                print("\nPrimero debe simular el torneo.")
 
-        if opcion == 8:
-            if datos.torneo_simulado:
-                op.lideres_barridas()
+        elif opcion == 6:
+            if torneo_simulado:
+                op.estadistica_equipo(matriz_torneo,codigo_equipos)
+
             else:
-                print("\n Primero debe simular el torneo.")
-    
-        if opcion == 9:
-            print('\n Programa Finalizado')
-            break
+                print("\nPrimero debe simular el torneo.")
+
+        elif opcion == 7:
+            if torneo_simulado:
+                op.podio(matriz_torneo,codigo_equipos)
+
+            else:
+                print("\nPrimero debe simular el torneo.")
+
+        elif opcion == 8:
+            if torneo_simulado:
+                op.lideres_barridas(matriz_torneo,codigo_equipos)
+
+            else:
+                print("\nPrimero debe simular el torneo.")
+
+        elif opcion == 9:
+            print('\nPrograma Finalizado')
+
 
 if __name__ == '__main__':
     main()

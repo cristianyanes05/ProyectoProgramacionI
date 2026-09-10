@@ -1,63 +1,63 @@
-# Desarrollen perfil_equipo.py dentro de la carpeta código del repositorio. 
-# El programa deberá solicitar el nombre del equipo, comisión, nombre de cada integrante y rol inicial en el proyecto.
-# • Normalizar los nombres con title().
-# • Convertir el nombre del equipo a mayúsculas.
-# • Informar la cantidad de caracteres del nombre del equipo.
-# • Generar una sigla con la inicial de cada palabra.
-# • Verificar si el nombre del equipo contiene al menos un dígito recorriendo sus caracteres y utilizando isdigit().
-# • Mostrar toda la información mediante f-strings.
-# • Mantener las operaciones de procesamiento dentro de funciones y la entrada/salida general en el programa principal.
+#Desarrollenperfil_equipo.pydentrodelacarpetacódigodelrepositorio.
+#Elprogramadeberásolicitarelnombredelequipo,comisión,nombredecadaintegranteyrolinicialenelproyecto.
+#•Normalizarlosnombrescontitle().
+#•Convertirelnombredelequipoamayúsculas.
+#•Informarlacantidaddecaracteresdelnombredelequipo.
+#•Generarunasiglaconlainicialdecadapalabra.
+#•Verificarsielnombredelequipocontienealmenosundígitorecorriendosuscaracteresyutilizandoisdigit().
+#•Mostrartodalainformaciónmediantef-strings.
+#•Mantenerlasoperacionesdeprocesamientodentrodefuncionesylaentrada/salidageneralenelprogramaprincipal.
 
-def generar_sigla(nombre):
-    """ 
-    Recibe el nombre del equipo, lo separa en palabras y extrae la primera 
-    letra de cada una para retornar la sigla completa en mayúsculas.
-    """
-    lista_palabras = nombre.split()
-    sigla = ""
-    for palabra in lista_palabras:
-        sigla = sigla + palabra[0]
-    return sigla.upper()
+defgenerar_sigla(nombre):
+"""
+Recibeelnombredelequipo,loseparaenpalabrasyextraelaprimera
+letradecadaunapararetornarlasiglacompletaenmayúsculas.
+"""
+lista_palabras=nombre.split()
+sigla=""
+forpalabrainlista_palabras:
+sigla=sigla+palabra[0]
+returnsigla.upper()
 
-def verificar_digito(nombre):
-    """
-    Recorre los caracteres del nombre y retorna True si encuentra 
-    al menos un dígito numérico, o False en caso contrario.
-    """
-    for caracter in nombre:
-        if caracter.isdigit():
-            return True
-    return False
+defverificar_digito(nombre):
+"""
+RecorreloscaracteresdelnombreyretornaTruesiencuentra
+almenosundígitonumérico,oFalseencasocontrario.
+"""
+forcaracterinnombre:
+ifcaracter.isdigit():
+returnTrue
+returnFalse
 
 
 print("\n")
-cadena1= "PERFIL DEL EQUIPO"
-print(cadena1.center(50, "-"))
-nombre_equipo = input("Ingresá el nombre del equipo: ")
+cadena1="PERFILDELEQUIPO"
+print(cadena1.center(50,"-"))
+nombre_equipo=input("Ingresáelnombredelequipo:")
 print("---")
-comision = int(input("Ingresá la comisión perteneciente: "))
+comision=int(input("Ingresálacomisiónperteneciente:"))
 print("---")
-integrantes = input("Ingresá el nombre de cada integrante: ")
+integrantes=input("Ingresáelnombredecadaintegrante:")
 print("---")
-rol_proyecto = input("Ingresá el rol inicial de cada integrante: ")
+rol_proyecto=input("Ingresáelrolinicialdecadaintegrante:")
 print("---")
 print("\n")
-cadena2= "RESULTADOS"
-print(cadena2.center(50, "-"))
-print(f"Nombres normalizados: {integrantes.title()}")
+cadena2="RESULTADOS"
+print(cadena2.center(50,"-"))
+print(f"Nombresnormalizados:{integrantes.title()}")
 print("---")
-print(f"Nombre del equipo en mayúscula: {nombre_equipo.upper()}")
+print(f"Nombredelequipoenmayúscula:{nombre_equipo.upper()}")
 print("---")
-print(f"Cantidad de caracteres que contiene el nombre del equipo: {len(nombre_equipo)}")
+print(f"Cantidaddecaracteresquecontieneelnombredelequipo:{len(nombre_equipo)}")
 print("---")
-sigla_equipo = generar_sigla(nombre_equipo)
-print(f"Sigla del equipo: {sigla_equipo}")
+sigla_equipo=generar_sigla(nombre_equipo)
+print(f"Sigladelequipo:{sigla_equipo}")
 print("---")
-contiene_numero = verificar_digito(nombre_equipo) 
-if contiene_numero:
-    print (f"El nombre del equipo {nombre_equipo} contiene numeros")
+contiene_numero=verificar_digito(nombre_equipo)
+ifcontiene_numero:
+print(f"Elnombredelequipo{nombre_equipo}contienenumeros")
 else:
-    print(f"El nombre del equipo {nombre_equipo} no tiene numeros")
+print(f"Elnombredelequipo{nombre_equipo}notienenumeros")
 print("---")
 
 
