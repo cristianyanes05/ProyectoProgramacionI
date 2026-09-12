@@ -1,4 +1,4 @@
-<u> ### Sistema de Administración de Torneo (CS2) </u>
+### Sistema de Administración de Torneo (CS2) 
 
 **Integrantes:**
 * Encina, Leonel
