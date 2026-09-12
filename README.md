@@ -1,12 +1,1 @@
-Integrantes:
-Encina,Leonel
-Vazquez,Gonzalo
-Yanes,Cristian
-
-Problema:
-CreaciondeSistemaparaadministraruntorneodeunvideojuego(Cs2).
-
-Ejecucion:
-para ejecutar el programa nada mas debes de descargar la carpeta proyecto_etapa1.
-una vez dentro nada mas abris la terminal, haces pip install random.
-Y listo, ya podes correr todo el programa apretando F5 
+# ꜱɪꜱᴛᴇᴍᴀ ᴅᴇ ᴀᴅᴍɪɴɪꜱᴛʀᴀᴄɪóɴ ᴅᴇ ᴛᴏʀɴᴇᴏ (ᴄꜱ𝟤)## 👥 ɪɴᴛᴇɢʀᴀɴᴛᴇꜱ* ᴇɴᴄɪɴᴀ, ʟᴇᴏɴᴇʟ* ᴠᴀᴢǫᴜᴇᴢ, ɢᴏɴᴢᴀʟᴏ* ʏᴀɴᴇꜱ, ᴄʀɪꜱᴛɪᴀɴ---## 🎯 ᴅᴇꜱᴄʀɪᴘᴄɪóɴ ᴅᴇʟ ᴘʀᴏʏᴇᴄᴛᴏᴄʀᴇᴀᴄɪóɴ ᴅᴇ ᴜɴ ꜱɪꜱᴛᴇᴍᴀ ᴇɴ ᴘʏᴛʜᴏɴ ᴘᴀʀᴀ ᴀᴅᴍɪɴɪꜱᴛʀᴀʀ ʏ ɢᴇꜱᴛɪᴏɴᴀʀ ᴜɴ ᴛᴏʀɴᴇᴏ ᴅᴇʟ ᴠɪᴅᴇᴏᴊᴜᴇɢᴏ **ᴄᴏᴜɴᴛᴇʀ-ꜱᴛʀɪᴋᴇ 𝟤 (ᴄꜱ𝟤)**.---## 🚀 ɪɴꜱᴛʀᴜᴄᴄɪᴏɴᴇꜱ ᴅᴇ ᴇᴊᴇᴄᴜᴄɪóɴ𝟣. **ᴅᴇꜱᴄᴀʀɢᴀʀ ᴇʟ ᴘʀᴏʏᴇᴄᴛᴏ:**   * ᴄʟᴏɴᴀʀ ᴏ ᴅᴇꜱᴄᴀʀɢᴀʀ ʟᴀ ᴄᴀʀᴘᴇᴛᴀ `ᴘʀᴏʏᴇᴄᴛᴏ_ᴇᴛᴀᴘᴀ𝟣` ᴇɴ ᴛᴜ ᴇǫᴜɪᴘᴏ.𝟤. **ᴀʙʀɪʀ ᴇʟ ᴇɴᴛᴏʀɴᴏ:**   * ᴀʙʀɪʀ ʟᴀ ᴄᴀʀᴘᴇᴛᴀ `ᴘʀᴏʏᴇᴄᴛᴏ_ᴇᴛᴀᴘᴀ𝟣` ᴅᴇɴᴛʀᴏ ᴅᴇ ᴠɪꜱᴜᴀʟ ꜱᴛᴜᴅɪᴏ ᴄᴏᴅᴇ.𝟥. **ᴇᴊᴇᴄᴜᴛᴀʀ ᴇʟ ᴘʀᴏɢʀᴀᴍᴀ:**   * ᴀʙʀɪʀ ᴇʟ ᴀʀᴄʜɪᴠᴏ ᴘʀɪɴᴄɪᴘᴀʟ ᴅᴇɴᴛʀᴏ ᴅᴇ ʟᴀ ᴄᴀʀᴘᴇᴛᴀ `ᴄᴏᴅɪɢᴏ/`.   * ᴘʀᴇꜱɪᴏɴᴀʀ ʟᴀ ᴛᴇᴄʟᴀ **`ꜰ𝟧`** (ᴏ ʜᴀᴄᴇʀ ᴄʟɪᴄ ᴇɴ ᴇʟ ʙᴏᴛóɴ ᴅᴇ ʀᴇᴘʀᴏᴅᴜᴄᴄɪóɴ ▶ ᴇɴ ʟᴀ ᴇꜱǫᴜɪɴᴀ ꜱᴜᴘᴇʀɪᴏʀ ᴅᴇʀᴇᴄʜᴀ) ᴘᴀʀᴀ ɪɴɪᴄɪᴀʀ ʟᴀ ᴇᴊᴇᴄᴜᴄɪóɴ ᴇɴ ʟᴀ ᴛᴇʀᴍɪɴᴀʟ.
