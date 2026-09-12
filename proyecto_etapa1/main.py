@@ -1,10 +1,9 @@
-# main.py → Archivo principal que administra el menú, valida las entradas del usuario y coordina las funciones.
-
+# main.py → acá se maneja el menú, la entrada del usuario y llamamos a los otros archivos.
 import operaciones as op
 import datos
 
 
-# Despliega en pantalla las opciones disponibles para el usuario
+# imprime en pantalla las opciones del menú
 def mostrar_menu():
     print("\n--- Torneo CS2 ---")
     print("1. Ver banco general")
@@ -19,26 +18,27 @@ def mostrar_menu():
     print("9. Salir")
 
 
+# carga la lista con los equipos que ya vienen guardados
 def main():
-    # Carga la lista inicial de equipos precargados
     banco_general = datos.obtener_banco_general()
-
+    # variables con listas vacías para guardar los datos y la matriz a medida que avanza el programa
     agregados = []
     equipos_finales = []
     codigo_equipos = []
     matriz_torneo = []
 
+    # bandera para saber si ya se simuló el torneo o no
     torneo_simulado = False
 
     opcion = 0
 
-# bucle while para mantener el menú abierto hasta que aprieten 9
+    # bucle while para mantener el menú abierto hasta que aprieten 9
     while opcion != 9:
 
         mostrar_menu()
 
         opcion = input("Seleccione una opcion: ")
-        # Validacion de entrada: asegura que la opcion sea numerica y esté dentro del rango (1 a 9)
+        # valida que metan un número del 1 al 9 y no se rompa
         while not opcion.isdigit() or int(opcion) < 1 or int(opcion) > 9:
             print("Debe ingresar un numero del 1 al 9.")
             opcion = input("Seleccione una opcion: ")
@@ -46,6 +46,7 @@ def main():
         opcion = int(opcion)
 
         if opcion == 1:
+            # suma un nuevo equipo a la lista
             op.ver_equipos(banco_general)
 
         elif opcion == 2:
@@ -99,5 +100,6 @@ def main():
             print("\nPrograma Finalizado")
 
 
+# arranca el programa llamando a main()
 if __name__ == "__main__":
     main()
