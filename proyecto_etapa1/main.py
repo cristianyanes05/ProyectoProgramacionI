@@ -4,14 +4,14 @@ import datos
 
 def mostrar_menu():
     print("\n--- Torneo CS2 ---")
-    print("1. Ver Banco General")
-    print("2. Agregar Equipo")
-    print("3. Visualizar Equipos Finales")
-    print("4. Simular Torneo")
-    print("5. Tabla General")
-    print("6. Estadísticas de Equipo")
+    print("1. Ver banco general")
+    print("2. Agregar equipo")
+    print("3. Visualizar equipos finales")
+    print("4. Simular torneo")
+    print("5. Tabla general")
+    print("6. Estadísticas de equipo")
     print("7. Podio")
-    print("8. Líderes en Barridas")
+    print("8. Líderes en barridas")
     print('-' * 20)
     print("9. Salir")
 
