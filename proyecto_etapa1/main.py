@@ -5,7 +5,9 @@ import datos
 
 # imprime en pantalla las opciones del menú
 def mostrar_menu():
-    print("\n--- Torneo CS2 ---")
+    print("\n" + "=" * 50)
+    print("      MENU PRINCIPAL - TORNEO ESPORTS CLI")
+    print("=" * 50)
     print("1. Ver banco general")
     print("2. Agregar equipo")
     print("3. Visualizar equipos finales")
@@ -14,9 +16,8 @@ def mostrar_menu():
     print("6. Estadísticas de equipo")
     print("7. Podio")
     print("8. Líderes en barridas")
-    print("-" * 20)
     print("9. Salir")
-
+    print("=" * 50)
 
 # carga la lista con los equipos que ya vienen guardados
 def main():
