@@ -1,16 +1,1 @@
-### 🎮 Sistema de Administración de Torneo (CS2)
-
-**Integrantes:**
-* Encina, Leonel
-* Vazquez, Gonzalo
-* Yanes, Cristian
-
----
-
-#### 🎯 Descripción
-Desarrollo de un sistema en Python para administrar y gestionar un torneo de **Counter-Strike 2 (CS2)**.
-
-#### 🚀 Ejecución
-1. Abrir la carpeta `proyecto_etapa1` en VS Code.
-2. Abrir el archivo principal dentro de `codigo/`.
-3. Presionar **`F5`** para ejecutar en la terminal.
+### 🎮 ꜱɪꜱᴛᴇᴍᴀ ᴅᴇ ᴀᴅᴍɪɴɪꜱᴛʀᴀᴄɪóɴ ᴅᴇ ᴛᴏʀɴᴇᴏ (ᴄꜱ𝟤)**ɪɴᴛᴇɢʀᴀɴᴛᴇꜱ:*** ᴇɴᴄɪɴᴀ, ʟᴇᴏɴᴇʟ* ᴠᴀᴢǫᴜᴇᴢ, ɢᴏɴᴢᴀʟᴏ* ʏᴀɴᴇꜱ, ᴄʀɪꜱᴛɪᴀɴ---#### 🎯 ᴅᴇꜱᴄʀɪᴘᴄɪóɴᴅᴇꜱᴀʀʀᴏʟʟᴏ ᴅᴇ ᴜɴ ꜱɪꜱᴛᴇᴍᴀ ᴇɴ ᴘʏᴛʜᴏɴ ᴘᴀʀᴀ ᴀᴅᴍɪɴɪꜱᴛʀᴀʀ ʏ ɢᴇꜱᴛɪᴏɴᴀʀ ᴜɴ ᴛᴏʀɴᴇᴏ ᴅᴇ **ᴄᴏᴜɴᴛᴇʀ-ꜱᴛʀɪᴋᴇ 𝟤 (ᴄꜱ𝟤)**.#### 🚀 ᴇᴊᴇᴄᴜᴄɪóɴ𝟣. ᴀʙʀɪʀ ʟᴀ ᴄᴀʀᴘᴇᴛᴀ `ᴘʀᴏʏᴇᴄᴛᴏ_ᴇᴛᴀᴘᴀ𝟣` ᴇɴ ᴠꜱ ᴄᴏᴅᴇ.𝟤. ᴀʙʀɪʀ ᴇʟ ᴀʀᴄʜɪᴠᴏ ᴘʀɪɴᴄɪᴘᴀʟ ᴅᴇɴᴛʀᴏ ᴅᴇ `ᴄᴏᴅɪɢᴏ/`.𝟥. ᴘʀᴇꜱɪᴏɴᴀʀ **`ꜰ𝟧`** ᴘᴀʀᴀ ᴇᴊᴇᴄᴜᴛᴀʀ ᴇɴ ʟᴀ ᴛᴇʀᴍɪɴᴀʟ.
